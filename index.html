@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Stylish Menu Bar</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--        <link rel="stylesheet" href="https://open-source.extive.eu/micro-interaction-theme.css">-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		<link rel="icon" href="img/img.ico">
+        <link rel="stylesheet" href="css/M_bar.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="navigation">
+                <a href="m-bar.html" id="logo"><h2><i class="fas fa-home"></i>ToshIT</h2></a>
+                <button class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="ul-list">
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                            <span class="text">Home</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                            <span class="text">Profile</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                            <span class="text">Message</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon"><ion-icon name="camera-outline"></ion-icon></span>
+                            <span class="text">Photos</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                            <span class="text">Settings</span>
+                        </a>
+                    </li>
+                    
+                    <div class='closemenu'><i class="fas fa-times"></i></div>
+                </ul>
+            </div>
+            <content>
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="form-label">Username:</label>
+                        <input id="username" class="form-control" type="text" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password:</label>
+                        <input id="password" class="form-control" type="password" name="password">
+                        <i class="fas fa-eye" id="toggle"></i>
+                    </div>
+                    <button class="btn btn-primary" type="button">Submit</button>
+                </form>
+            </content>
+            
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <!-- <script src="https://open-source.extive.eu/micro-interaction.js'"></script> -->
+        <script src="js/mbar.js"></script>
+                
+    </body>
+
+</html>
