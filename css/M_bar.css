@@ -12,20 +12,18 @@
 */
 
 body{
-/*
-    display: flex;
-    justify-content: center;
-    align-items: center;
-*/
     color: #fff;
+    font-size: 2rem;
 }
 
 .container{
+/*    position: absolute;*/
     width: 100%;
     height: 100vh;
     background: steelblue;
 }
 
+/*NAVI STYLES*/
 #logo{
     color: #fff;
     padding-left: 10px;
@@ -63,7 +61,7 @@ body{
 
 li .icon{
     position: absolute;
-    transform: translate(-110%, -10%);
+    transform: translate(-110%, 10%);
     font-size: 2rem;
     color: #fff;
 }
@@ -85,58 +83,113 @@ li .icon{
     outline: auto;
 }
 
-content{
-    position: absolute;
-    transform: translate(80%, 50%);
-    padding: 10px;
-    top: 20%;
-    width: 40%;
-    border: 2px solid #fff;
-    
-}
 /*FORM STYLES*/
+form{
+    position: relative;
+    transform: translate(40%, 100%);
+    padding: 50px 20px;
+    width: 55%;
+    height: 30%;
+    border: 2px solid #fff;
+    display: flex;
+    flex-direction: column;
+}
+
 .form-group{
-    width: inherit;
-    font-size: 1.2rem;
-    font-weight: 600;
+    display: flex;
+    flex-direction: center;
+    width: 100%;
+    padding: 20px;
 }
 
 .form-label{
-    margin: 1.5rem;
+    margin: 1rem 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
 .form-control{
-    width: 30rem;
-    height: 4rem;
-    margin: 1rem;
+    width: 60%;
+    height: 5rem;
     padding: 0 0.5rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: monospace;
     border: 3px solid #000;
-    border-radius: 10px;
+    border-radius: 15px;
+    outline: 0;
+    background: steelblue;
     box-shadow: 2px 1px 10px #000;
 }
 
 .form-control:focus{
-    border: none;
+    border: 0;
+    font-size: 2rem;
     border-bottom: 5px solid #000;
 }
 
+.pass-control{
+    position: relative;
+    width: 60%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    background: steelblue;
+/*    border-radius: 15px;*/
+}
+
+.pass-control input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    font-size: 2rem;
+    border: 3px solid #000;
+    padding: 0 0.5rem;
+    outline: none;
+    flex: 1;
+    border-radius: 15px;
+    background: transparent;
+    box-shadow: 2px 1px 10px #000;
+}
+
+.pass-control input:focus{
+    border: 0;
+    font-size: 2rem;
+    border-bottom: 5px solid #000;
+}
+
+.pass-control i{
+    color: #000;
+    position: absolute;
+    right: 1rem;
+    border-left: 2px solid #000;
+    font-size: 2rem;
+}
+
+/*
 .form-group .fas{
     position: absolute;
     color: #000;
-    left: 38.5rem;
-    bottom: 6.6rem;
+    left: 41.5rem;
+    bottom: 12.3rem;
     font-size: 2rem;
     cursor: pointer;
     border-left: 2px solid #000;
+    padding-left: 5px;
 }
+*/
 
 .btn{
-    position: relative;
-    left: 18rem;
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
+    position: absolute;
+    right: 40%;
+    top: 70%;
+/*
+    left: 20rem;
+    top: 18rem;
+*/
+    padding: 1.5rem 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
     background: #000;
     color: #fff;
@@ -146,62 +199,22 @@ content{
 }
 
 /*Media queries*/
-@media screen and (max-width: 1380px){
-     content{
-        transform: translate(25%, 50%);
-        width: 65%;
-    }
-    .form-control{
-        width: 35rem;
+@media screen and (max-width: 1400px){
+    form{
+        width: 80%;
+        height: 35%;
+        transform: translate(13%, 50%);
     }
     .btn{
-        left: 20.5rem;
+        right: 40%;
     }
-    .form-group .fas{
-        left: 43rem;
+    .form-group{
+        margin-left: -2rem;
     }
 }
 
-@media screen and (max-width: 969px){
-     content{
-        transform: translate(45%, 50%);
-        width: 55%;
-    }
-    .form-control{
-        width: 37rem;
-    }
-    .btn{
-        left: 15.5rem;
-    }
-    .form-group .fas{
-        left: 35rem;
-    }
-}
-
-@media screen and (max-width: 769px){
-    content{
-        transform: translate(40%, 50%);
-    /*    padding: 10px;*/
-        top: 20%;
-        width: 55%;
-    }
-    .form-control{
-        width: 30rem;
-        margin: 0;
-        padding: 0;
-    }
-    .form-label{
-        margin: 0.5rem;
-    }
-    .btn{
-        left: 10rem;
-        margin-top: 1rem;
-        padding: 1rem 2rem;
-    }
-    .form-group .fas{
-        left: 27.5rem;
-        bottom: 6.6rem;
-    }
+@media screen and (max-width: 860px){
+    /*NAVIGATION STYLES*/
     .navigation{
         width: 100%;
         padding-left: 1rem;
@@ -213,7 +226,6 @@ content{
        background: #042139;
        flex-direction: column;
        position: absolute;
-/*       transform: translate(0, 0);*/
        left: 0;
        right: 0;
        top: 0;
@@ -223,7 +235,6 @@ content{
        width: 100%;
        transform: top 0.5s ease;
     }
-/*    .navigation ul;*/
     .closemenu{
         display: block;
         position: absolute;
@@ -243,30 +254,133 @@ content{
     .navigation ul.hide{
         display: none;
     }
-    
     #hamburger{
         display: block;
         
     }
     
-}
-
-@media screen and (max-width: 600px){
-    .container{
-        width: 100%;
+    /*FORM STYLES*/
+    form{
+        width: 80%;
+        height: 35%;
+        transform: translate(13%, 50%);
     }
-     content{
-        transform: translate(30%, 50%);
-        width: 67%;
+    .form-group{
+        margin: 1rem auto;
+    }
+    .form-label{
+        margin: 1rem 1rem;
     }
     .form-control{
-        width: 20rem;
+        width: 65%;
+    }
+    .pass-control {
+        width: 65%;
     }
     .btn{
-        left: 5.5rem;
+        right: 35%;
+        top: 75%;
+    }  
+}
+
+@media screen and (max-width: 768px){
+    /*NAVIGATION STYLES
+    .navigation{
+        width: 100%;
+        padding-left: 1rem;
     }
-    .form-group .fas{
-        left: 17.5rem;
+    .navigation ul{
+       height: 100vh;
+       position: fixed;
+       display: none;
+       background: #042139;
+       flex-direction: column;
+       position: absolute;
+       left: 0;
+       right: 0;
+       top: 0;
+       z-index: 10;
+       align-items: center;
+       justify-content: center;
+       width: 100%;
+       transform: top 0.5s ease;
+    }
+    .closemenu{
+        display: block;
+        position: absolute;
+        top: 22px;
+        right: 1rem;
+    }
+    .navigation ul li{
+        border-bottom: 2px solid #fff;
+        padding: 50px;
+    }
+    .navigation ul li:last-child{
+        border: none;
+    }
+    .navigation ul.show{
+        display: flex;
+    }
+    .navigation ul.hide{
+        display: none;
+    }
+    #hamburger{
+        display: block;
+        
+    }
+    */
+    /*FORM STYLES*/
+    form{
+        width: 80%;
+        height: 35%;
+        transform: translate(13%, 50%);
+    }
+    .form-group{
+        margin: 1rem auto;
+    }
+    .form-label{
+        margin: 1rem 1rem;
+    }
+    .form-control{
+        width: 65%;
+    }
+    .pass-control {
+        width: 65%;
+    }
+    .btn{
+        right: 35%;
+        top: 75%;
+    }  
+}
+
+@media screen and (max-width: 601px){
+    form{
+        display: block;
+    }
+    .form-group{
+        display: block;
+        margin-top: -2rem;
+    }
+    .form-label{
+        margin-left: 1.5rem;
+    }
+    .form-control{
+        width: 90%;
+        margin-left: 1rem;
+    }
+    .pass-control{
+        width: 90%;
+        margin-left: 1rem;
+    }
+    .btn{
+        right: 35%;
+    }
+}
+
+@media screen and (max-width: 501px){
+/*
+    .container{
+        width: 100%;
     }
     
     .closemenu{
@@ -277,30 +391,42 @@ content{
     }
     .navigation ul li{
         display: block
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid #f00;
         padding: 50px;
     }
-    
+*/
+    .btn{
+        right: 31%;
+    }
 }
 
-@media screen and (max-width: 420px){
-    .container{
-        width: 100%;
+@media screen and (max-width: 415px){
+    .btn{
+        right: 25%;
     }
-    .navigation{
+}
+
+@media screen and (max-width: 376px){
+    form{
+        transform: translate(13%, 70%)
     }
-     content{
-        transform: translate(25%, 50%);
-        width: 68%;
+    .form-group{
+        display: block;
+        margin-top: -2rem;
+    }
+    .form-label{
+        margin-left: 0.5rem;
     }
     .form-control{
-        width: 17rem;
+        width: 100%;
+        margin-left: 0;
+    }
+    .pass-control{
+        width: 100%;
+        margin-left: 0;
     }
     .btn{
-        left: 4rem;
-    }
-    .form-group .fas{
-        left: 14.5rem;
+        right: 23%;
     }
 }
     
