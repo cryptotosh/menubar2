@@ -85,7 +85,7 @@ li .icon{
 
 /*FORM STYLES*/
 form{
-    position: relative;
+    position: absolute;
     transform: translate(40%, 100%);
     padding: 50px 20px;
     width: 55%;
